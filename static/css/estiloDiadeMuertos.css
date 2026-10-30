@@ -1,0 +1,188 @@
+/* ==========================================================================
+   ESTILOS DÍA DE MUERTOS - BIBLIOTECA UNIVERSITARIA
+   Archivo: /static/css/estilos.css
+   ========================================================================== */
+
+/* Variables de color y fuentes */
+:root {
+    --cempasuchil: #FF6F00;       /* Naranja vibrante tradicional */
+    --cempasuchil-light: #FF9800; /* Naranja claro para destacables */
+    --morado-altares: #4A148C;    /* Morado profundo elegante */
+    --morado-hover: #6A1B9A;      /* Morado claro para efectos hovers */
+    --fuego-oro: #FFD54F;         /* Dorado/Amarillo cálido */
+    --negro-papel: #121212;       /* Fondo oscuro sobrio */
+    --gris-papel: #1E1E1E;        /* Fondo para tarjetas/contenedores */
+    --texto-principal: #F5F5F5;   /* Blanco hueso para contraste */
+    --texto-secundario: #D1C4E9;  /* Morado muy claro para texto secundario */
+    --borde-adorno: #D81B60;      /* Rosa mexicano para acentos de borde */
+}
+
+/* Base global */
+body {
+    background-color: var(--negro-papel);
+    color: var(--texto-principal);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 50% 0%, rgba(106, 27, 154, 0.15), transparent 70%);
+}
+
+/* Encabezados y títulos generales */
+h1, h2, h3, h4, .brand-title {
+    font-family: 'Garamond', 'Trebuchet MS', serif;
+    font-weight: 700;
+}
+
+/* Layout y Contenedores */
+.max-width-container {
+    max-width: 1100px;
+}
+
+.main-container {
+    max-width: 900px;
+    background-color: var(--gris-papel);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 111, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
+                0 0 15px rgba(255, 111, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+/* Barra de Navegación */
+.navbar-minimal {
+    background-color: var(--morado-altares) !important;
+    border-bottom: 4px solid var(--cempasuchil);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    padding: 0.8rem 1rem;
+}
+
+.brand-title {
+    color: var(--fuego-oro) !important;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.brand-title:hover {
+    color: var(--cempasuchil-light) !important;
+}
+
+.nav-link-custom {
+    color: var(--texto-principal) !important;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0.3rem;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    background-color: var(--morado-hover);
+    color: var(--fuego-oro) !important;
+    transform: translateY(-1px);
+}
+
+.navbar-toggler {
+    border-color: var(--cempasuchil);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Textos e Introducción */
+.page-title {
+    color: var(--cempasuchil);
+    font-size: 2.3rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px dashed var(--borde-adorno);
+    padding-bottom: 0.5rem;
+}
+
+.page-intro {
+    font-size: 1.15rem;
+    color: var(--texto-secundario);
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.section-subtitle {
+    color: var(--fuego-oro);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-subtitle::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 3px;
+    background: var(--cempasuchil);
+    margin-top: 4px;
+    border-radius: 2px;
+}
+
+.text-body-secondary {
+    color: var(--texto-principal) !important;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Estilos de Lista (Catálogo, Servicios e Inicio) */
+.minimal-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.minimal-list-item {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid var(--cempasuchil);
+    margin-bottom: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.25s ease;
+    line-height: 1.6;
+}
+
+.minimal-list-item:hover {
+    background-color: rgba(106, 27, 154, 0.25);
+    border-left-color: var(--fuego-oro);
+    transform: translateX(5px);
+}
+
+.list-item-title {
+    color: var(--cempasuchil-light);
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-right: 0.3rem;
+}
+
+/* Tarjetas de Contacto */
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(216, 27, 96, 0.3);
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    transition: border-color 0.3s ease;
+}
+
+.contact-card:hover {
+    border-color: var(--cempasuchil);
+}
+
+.contact-label {
+    color: var(--fuego-oro);
+    display: block;
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
